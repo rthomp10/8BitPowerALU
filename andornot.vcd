@@ -1,0 +1,82 @@
+$date
+	Tue May 14 17:19:04 2019
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module andornot_tb $end
+$scope module Johnson $end
+$var wire 8 ! a [7:0] $end
+$var wire 8 " b [7:0] $end
+$var wire 2 # ctrl [1:0] $end
+$var wire 1 $ overflow $end
+$var reg 8 % s [7:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 %
+z$
+b0 #
+b0 "
+b101 !
+$end
+#50
+b1 %
+b1 "
+#100
+b0 %
+b10 "
+#150
+b100 %
+b100 "
+#250
+b101 %
+b101 "
+#300
+b0 %
+b11111010 "
+#350
+b1 %
+b11111001 "
+#400
+b101 %
+b1 #
+b0 "
+#450
+b1 "
+#500
+b111 %
+b10 "
+#550
+b101 %
+b100 "
+#650
+b101 "
+#700
+b11111111 %
+b11111010 "
+#750
+b11111101 %
+b11111001 "
+#800
+b11111010 %
+b10 #
+b0 "
+#850
+b1 "
+#900
+b10 "
+#950
+b100 "
+#1050
+b101 "
+#1100
+b11111010 "
+#1150
+b11111001 "
+#1200

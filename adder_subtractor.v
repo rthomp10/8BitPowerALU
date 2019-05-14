@@ -4,7 +4,7 @@ input [7:0] a; //var1
 input [7:0] b; //var2
 output[7:0] s; //output
 output overflow; //indicates if there was an over flow
-input op;      // 0 = add, 1 = subtract
+input op;      // 0 -> a+b, 1 -> a-b
 
 //Carry and xor wires
 wire [6:0] carry;
@@ -33,7 +33,5 @@ full_adder a7(s[7], last_cout,a[7], bxor[7], carry[6]);
 
 //xor that manages overflow
 xor(overflow, carry[6], last_cout);
-
-//
 
 endmodule
