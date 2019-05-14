@@ -1,6 +1,5 @@
 //https://tinyurl.com/y435nrgr
-module adder_subtractor( s, overflow, enable, a, b, op);
-input enable;  //enable module
+module adder_subtractor( s, overflow, a, b, op);
 input [7:0] a; //var1
 input [7:0] b; //var2
 output[7:0] s; //output
@@ -34,5 +33,7 @@ full_adder a7(s[7], last_cout,a[7], bxor[7], carry[6]);
 
 //xor that manages overflow
 xor(overflow, carry[6], last_cout);
+
+//
 
 endmodule

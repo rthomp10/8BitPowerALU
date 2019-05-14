@@ -4,7 +4,6 @@ module adder_subtractor_tb;
 reg signed [7:0] a;
 reg signed [7:0] b;
 reg op;
-reg enable;
 wire signed [7:0] s;
 wire overflow;
 
@@ -14,7 +13,7 @@ initial
 		$dumpvars(0,Johnson);
 		$display("  a   b op     s overflow");
 		$monitor("%d %d  %d  | %d  %d", a, b, op, s, overflow);
-		#0  enable = 1'b1;
+		
 		//edge cases around 0
 		#0  a = 8'b1; 	b =  8'd1; 	op = 1'b0;
 		#50 a = 8'd1;  	b =  8'd1; 	op = 1'b1;
@@ -37,6 +36,6 @@ initial
 		#50 $finish;
 	end
 
-adder_subtractor Johnson(s,overflow,enable,a,b,op);
+adder_subtractor Johnson(s,overflow,a,b,op);
 
 endmodule
