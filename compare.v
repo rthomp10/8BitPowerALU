@@ -37,6 +37,7 @@ always @( ctrl or a or b ) begin
 		4'd9:  s = (a > b);
 		4'd10: s = (a < b);
 		4'd11: s = (a == b);
+		default: s = 0;
 	endcase
 end
 

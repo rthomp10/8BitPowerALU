@@ -1,14 +1,13 @@
-module control ( out, clk, in );
+module control(compare_ctrl, andornot_ctrl, addsub_ctrl, clk, opcode, accum_in);
 
-input clk, in;
-output out;
-reg Q;
-
-initial begin
-	Q = 0;
-	end
+output [3:0] compare_ctrl;
+output [1:0] andornot_ctrl;
+output addsub_ctrl;
+input accum_in; //accumulator feedback
+input clk;
+input [3:0] opcode;
 
 always @( posedge clk ) begin
 	Q <= D;
-	end
+end
 endmodule

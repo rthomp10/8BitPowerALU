@@ -1,0 +1,37 @@
+$date
+	Thu May 16 17:07:24 2019
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module mux_tb $end
+$scope module DUT $end
+$var wire 8 ! addsub_in [7:0] $end
+$var wire 8 " andornot_in [7:0] $end
+$var wire 8 # compare_in [7:0] $end
+$var wire 2 $ ctrl [1:0] $end
+$var reg 8 % s [7:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b101 %
+b0 $
+b101 #
+b1010 "
+b1111 !
+$end
+#50
+b1010 %
+b1 $
+#100
+b1111 %
+b10 $
+#150
+b0 %
+b11 $
+#200
