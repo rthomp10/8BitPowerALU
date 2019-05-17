@@ -22,6 +22,6 @@ initial
 		#50 $finish;
 	end
 
-alumux DUT( s, ctrl, a, b, c );
+mux DUT( s, ctrl, a, b, c );
 
 endmodule

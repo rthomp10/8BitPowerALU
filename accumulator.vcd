@@ -1,0 +1,49 @@
+$date
+	Thu May 16 19:13:35 2019
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module accumulator_tb $end
+$scope module DUT $end
+$var wire 1 ! clk $end
+$var wire 8 " in [7:0] $end
+$var reg 8 # s [7:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 #
+b0 "
+0!
+$end
+#50
+1!
+#100
+0!
+#150
+b10100 "
+#200
+b10100 #
+1!
+#250
+0!
+#300
+b1111111 "
+#350
+b1111111 #
+1!
+#400
+0!
+#450
+b11001110 "
+#500
+b11001110 #
+1!
+#550
+0!
+#600

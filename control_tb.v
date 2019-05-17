@@ -27,5 +27,5 @@ initial begin
 	#10 D = 1'b1;
 	#10 $finish;
 end
-control DFF1( D, clk, Q );
+control DUT( D, clk, Q );
 endmodule
