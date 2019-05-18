@@ -8,7 +8,7 @@ reg [32:0] i;
 reg clk;
 
 initial begin
-for(i = 0; i < 40; i++) begin
+for(i = 0; i < 270; i++) begin
 	#25 clk = ~clk;
 	end
 $finish;
@@ -49,6 +49,106 @@ initial begin
 	#50 opcode <= 4'b0011;	a <= 8'd20;
 	#50 opcode <= 4'b0011;	a <= 8'd127;
 	#50 opcode <= 4'b0011;	a <= -8'd5;
+	
+	//Decrement A
+	#200 opcode<= 4'b0100;	a <= -8'd5;
+	#50 opcode <= 4'b0100;	a <= 8'd10;
+	#50 opcode <= 4'b0100;	a <= 8'd20;
+	#50 opcode <= 4'b0100;	a <= 8'd127;
+	#50 opcode <= 4'b0100;	a <= -8'd5;
+	
+	//1'Compliment
+	#200 opcode <= 4'b0101;	a <= -8'd5;
+	#50 opcode <= 4'b0101;	a <= 8'd10;
+	#50 opcode <= 4'b0101;	a <= 8'd20;
+	#50 opcode <= 4'b0101;	a <= 8'd127;
+    #50 opcode <= 4'b0101;	a <= -8'd128;
+	#50 opcode <= 4'b0101;	a <= -8'd1;
+	#50 opcode <= 4'b0101;	a <= 8'd1;
+	
+	//pre-loads 8'b11111111 for bit-wise comparisons
+	#50 opcode <= 4'b0000;	a <= -8'd1;
+	
+	//A AND B which selectively removes bits
+	#50 opcode <= 4'b0110;	a <= -8'd2;
+	#50 opcode <= 4'b0110;	a <= -8'd4;
+	#50 opcode <= 4'b0110;	a <= -8'd8;
+	#50 opcode <= 4'b0110;	a <= -8'd16;
+	#50 opcode <= 4'b0110;	a <= -8'd32;
+	
+	#50 opcode <= 4'b0000;	a <= -8'd1; //pre-load
+	
+	//A NAND B
+	#200 opcode <= 4'b0111;	a <= -8'd5;
+	#50 opcode <= 4'b0111;	a <= 8'd10;
+	#50 opcode <= 4'b0111;	a <= 8'd20;
+	#50 opcode <= 4'b0111;	a <= 8'd127;
+	#50 opcode <= 4'b0111;	a <= -8'd5;
+	
+	#50 opcode <= 4'b0000;	a <= -8'd1; //pre-load
+	
+	//A OR B
+	#200 opcode <= 4'b1000;	a <= -8'd5;
+	#50 opcode <= 4'b1000;	a <= 8'd10;
+	#50 opcode <= 4'b1000;	a <= 8'd20;
+	#50 opcode <= 4'b1000;	a <= 8'd127;
+	#50 opcode <= 4'b1000;	a <= -8'd5;
+	
+	#50 opcode <= 4'b0000;	a <= -8'd1; //pre-load
+	
+	//A NOR B
+	#200 opcode <= 4'b1001;	a <= -8'd5;
+	#50 opcode <= 4'b1001;	a <= 8'd10;
+	#50 opcode <= 4'b1001;	a <= 8'd20;
+	#50 opcode <= 4'b1001;	a <= 8'd127;
+	#50 opcode <= 4'b1001;	a <= -8'd5;
+	
+	#50 opcode <= 4'b0000;	a <= -8'd1; //pre-load
+	
+	//A XOR B
+	#200 opcode <= 4'b1010;	a <= -8'd5;
+	#50 opcode <= 4'b1010;	a <= 8'd10;
+	#50 opcode <= 4'b1010;	a <= 8'd20;
+	#50 opcode <= 4'b1010;	a <= 8'd127;
+	#50 opcode <= 4'b1010;	a <= -8'd5;
+	
+	#50 opcode <= 4'b0000;	a <= -8'd1; //pre-load
+	
+	//A XNOR B
+	#200 opcode <= 4'b1011;	a <= -8'd5;
+	#50 opcode <= 4'b1011;	a <= 8'd10;
+	#50 opcode <= 4'b1011;	a <= 8'd20;
+	#50 opcode <= 4'b1011;	a <= 8'd127;
+	#50 opcode <= 4'b1011;	a <= -8'd5;
+	
+	//A GT B
+	#200 opcode <= 4'b1100;	a <= -8'd5;
+	#50 opcode <= 4'b1100;	a <= 8'd10;
+	#50 opcode <= 4'b1100;	a <= 8'd20;
+	#50 opcode <= 4'b1100;	a <= 8'd127;
+	#50 opcode <= 4'b1100;	a <= -8'd5;
+	
+	//A LT B
+	#200 opcode <= 4'b1101;	a <= -8'd5;
+	#50 opcode <= 4'b1101;	a <= 8'd10;
+	#50 opcode <= 4'b1101;	a <= 8'd20;
+	#50 opcode <= 4'b1101;	a <= 8'd127;
+	#50 opcode <= 4'b1101;	a <= -8'd5;
+	
+	//A EQ B
+	#200 opcode <= 4'b1101;	a <= -8'd5;
+	#50 opcode <= 4'b1101;	a <= 8'd10;
+	#50 opcode <= 4'b1101;	a <= 8'd20;
+	#50 opcode <= 4'b1101;	a <= 8'd127;
+	#50 opcode <= 4'b1101;	a <= -8'd5;
+	
+	//NOT A
+	#200 opcode <= 4'b1111;	a <= -8'd5;
+	#50 opcode <= 4'b1111;	a <= 8'd10;
+	#50 opcode <= 4'b1111;	a <= 8'd20;
+	#50 opcode <= 4'b1111;	a <= 8'd127;
+	#50 opcode <= 4'b1111;	a <= -8'd5;
+	
 end
 
 PowerALU DUT(b, opcode, a, clk);

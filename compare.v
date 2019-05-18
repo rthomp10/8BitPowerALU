@@ -27,10 +27,12 @@ always @( ctrl or a or b) begin
 		4'd3:  s = a + 1;
 		4'd4:  s = a - 1;
 		4'd5:
-			if(a > 127)
-				s = a - 1;
+		begin
+			if(a < 0)
+				s = a + 1;
 			else
 				s = a;
+		end
 		4'd6:  s = ~(a | b);
 		4'd7:  s = a^b;
 		4'd8:  s = a^~b;

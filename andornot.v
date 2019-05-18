@@ -25,7 +25,7 @@ always @( ctrl or a or b ) begin
 		2'b00: s = a & b;
 		2'b01: s = a | b;
 		2'b10: s = ~a;
-		2'b11: s = (a & b);
+		2'b11: s = ~(a & b);
 		default: s = 0;
 	endcase
 end
