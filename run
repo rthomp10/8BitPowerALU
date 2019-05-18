@@ -1,0 +1,4 @@
+#!/bin/bash
+
+iverilog PowerALU_Ryan_Thompson.v control.v accumulator.v compare.v andornot.v adder_subtractor.v mux.v full_adder.v PowerALU_Ryan_Thompson_tb.v
+vvp a.out

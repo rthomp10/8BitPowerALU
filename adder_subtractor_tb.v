@@ -33,6 +33,9 @@ initial
 		#50 a = -8'd127;	b =  8'd1; 	op = 1'b1;
 		#50 a = -8'd127;	b = -8'd1; 	op = 1'b0;
 		#50 a = -8'd127;	b = -8'd1; 	op = 1'b1;
+		
+		//Cases previously found having and error
+		#50 a = -8'd127;	b = -8'd15; op = 1'b0;
 		#50 $finish;
 	end
 

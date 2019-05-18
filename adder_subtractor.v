@@ -1,15 +1,15 @@
 //Module by Ryan Thompson
 //https://tinyurl.com/y435nrgr
 module adder_subtractor( s, overflow, a, b, op);
-input [7:0] a; //var1
-input [7:0] b; //var2
-output[7:0] s; //output
+input  signed [7:0] a; //var1
+input  signed [7:0] b; //var2
+output signed [7:0] s; //output
 output overflow; //indicates if there was an over flow
-input op;      // 0 -> a+b, 1 -> a-b
+input  op;      // 0 -> a+b, 1 -> a-b
 
 //Carry and xor wires
 wire [6:0] carry;
-wire [7:0]  bxor;
+wire [7:0] bxor; //wires connecting to the FAs
 wire last_cout;
 
 //xor chain for subtraction (take a look at the diagram)

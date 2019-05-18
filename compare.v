@@ -15,13 +15,13 @@
 //*******************************//
 
 module compare( s, a, b, ctrl );
-input [7:0] a; //var1
-input [7:0] b; //var2
-output reg [7:0] s;
+input signed [7:0] a; //var1
+input signed [7:0] b; //var2
+output reg   [7:0] s;
 output overflow; //indicates if there was an over flow
 input [3:0] ctrl; //operation choice
 
-always @( ctrl ) begin
+always @( ctrl or a or b) begin
 	case (ctrl)
 		4'd2:  s = a;
 		4'd3:  s = a + 1;

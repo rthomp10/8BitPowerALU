@@ -8,24 +8,25 @@ ctrl operations for this mux
 10	passes the addsub module's results
 */
 
-module mux( s, ctrl, compare_in, andornot_in, addsub_in);
+module mux( s, ctrl, compare_in, andornot_in, addsub_in, overflow);
 
 output reg [7:0] s; //output
 input [1:0] ctrl;	//picks which module's output to pass
 input [7:0] compare_in; 	//
 input [7:0] andornot_in;	//Outputs of ALU modules -> mux
 input [7:0] addsub_in;		//
+input overflow; //accounts for arethmetic overflow from add
 
 initial begin
 	s = 0;
 end
 
-always @( ctrl or compare_in or andornot_in or addsub_in) begin
+always @( ctrl or compare_in or andornot_in or addsub_in or overflow) begin
 	case(ctrl) 
-	2'b00:   s = compare_in;
-	2'b01:   s = andornot_in;
-	2'b10:   s = addsub_in;
-	default: s = 0;
+	2'b00:   s <= compare_in;
+	2'b01:   s <= andornot_in;
+	2'b10:   s <= addsub_in;
+	default: s <= 0;
 	endcase
 end
 

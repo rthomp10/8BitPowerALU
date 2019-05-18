@@ -13,9 +13,8 @@
 module andornot( s, a, b, ctrl);
 input [7:0] a; 		//Input1
 input [7:0] b; 		//Input2
-output reg [7:0] s; //output
-output overflow; 	//indicates if there was an over flow
 input [1:0] ctrl; 	//operation choice
+output reg [7:0] s; //output
 
 initial begin
 	s = 0;
@@ -26,7 +25,7 @@ always @( ctrl or a or b ) begin
 		2'b00: s = a & b;
 		2'b01: s = a | b;
 		2'b10: s = ~a;
-		2'b11: s = (a & b)
+		2'b11: s = (a & b);
 		default: s = 0;
 	endcase
 end
