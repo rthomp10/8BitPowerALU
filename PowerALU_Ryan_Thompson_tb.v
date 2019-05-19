@@ -85,7 +85,7 @@ initial begin
 	#50 opcode <= 4'b0111;	a <= 8'd127;
 	#50 opcode <= 4'b0111;	a <= -8'd5;
 	
-	#50 opcode <= 4'b0000;	a <= -8'd1; //pre-load
+	#50 opcode <= 4'b0000;	a <= 8'b00010000; //pre-load
 	
 	//A OR B
 	#200 opcode <= 4'b1000;	a <= -8'd5;
@@ -97,11 +97,11 @@ initial begin
 	#50 opcode <= 4'b0000;	a <= -8'd1; //pre-load
 	
 	//A NOR B
-	#200 opcode <= 4'b1001;	a <= -8'd5;
-	#50 opcode <= 4'b1001;	a <= 8'd10;
-	#50 opcode <= 4'b1001;	a <= 8'd20;
-	#50 opcode <= 4'b1001;	a <= 8'd127;
-	#50 opcode <= 4'b1001;	a <= -8'd5;
+	#200 opcode <= 4'b1001;	a <= 8'b00010000;
+	#50 opcode <= 4'b1001;	a <= 8'b10010000;
+	#50 opcode <= 4'b1001;	a <= 8'b00000010;
+	#50 opcode <= 4'b1001;	a <= 8'b01010101;
+	#50 opcode <= 4'b1001;	a <= 8'b11110000;
 	
 	#50 opcode <= 4'b0000;	a <= -8'd1; //pre-load
 	
@@ -135,12 +135,14 @@ initial begin
 	#50 opcode <= 4'b1101;	a <= 8'd127;
 	#50 opcode <= 4'b1101;	a <= -8'd5;
 	
+	#50 opcode <= 4'b0000;	a <= -8'd13; //pre-load
+	
 	//A EQ B
-	#200 opcode <= 4'b1101;	a <= -8'd5;
-	#50 opcode <= 4'b1101;	a <= 8'd10;
-	#50 opcode <= 4'b1101;	a <= 8'd20;
-	#50 opcode <= 4'b1101;	a <= 8'd127;
-	#50 opcode <= 4'b1101;	a <= -8'd5;
+	#200 opcode <= 4'b1110;	a <= -8'd13;
+	#50 opcode <= 4'b1110;	a <= 8'd1;
+	#50 opcode <= 4'b1110;	a <= 8'd0;
+	#50 opcode <= 4'b1110;	a <= 8'd0;
+	#50 opcode <= 4'b1110;	a <= 8'd1;
 	
 	//NOT A
 	#200 opcode <= 4'b1111;	a <= -8'd5;

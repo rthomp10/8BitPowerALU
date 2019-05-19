@@ -34,10 +34,10 @@ always @( clk ) begin
 	4'b1000: andornot_ctrl <= 2'b01;   
 	4'b1001: compare_ctrl  <= 4'b0110;  
 	4'b1010: compare_ctrl  <= 4'b0111;  
-	4'b1011: compare_ctrl  <= 4'b1100;  
-	4'b1100: compare_ctrl  <= 4'b1101;  
-	4'b1101: compare_ctrl  <= 4'b1110;  
-	4'b1110: compare_ctrl  <= 4'b1111;  
+	4'b1011: compare_ctrl  <= 4'b1000;  
+	4'b1100: compare_ctrl  <= 4'b1001;  
+	4'b1101: compare_ctrl  <= 4'b1010;  
+	4'b1110: compare_ctrl  <= 4'b1011;  
 	4'b1111: andornot_ctrl <= 2'b10;   
 	endcase
 	

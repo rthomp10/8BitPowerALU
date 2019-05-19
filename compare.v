@@ -8,10 +8,10 @@
 // ctrl == 0101 -> 1's compliment
 // ctrl == 0110 -> A NOR B
 // ctrl == 0111 -> A XOR B
-// ctrl == 1100 -> A XNOR B
-// ctrl == 1101 -> A GT B (greater than)
-// ctrl == 1110 -> A LT B (less than)
-// ctrl == 1111 -> A EQ B (equal)
+// ctrl == 1000 -> A XNOR B
+// ctrl == 1001 -> A GT B (greater than)
+// ctrl == 1010 -> A LT B (less than)
+// ctrl == 1011 -> A EQ B (equal)
 //*******************************//
 
 module compare( s, a, b, ctrl );
