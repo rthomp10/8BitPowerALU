@@ -6,6 +6,7 @@ This is an 8-bit power ALU. The ALU takes a single 8-bit value and an opcode, pe
 ![Modified Block Diagram](https://github.com/rthomp10/8BitPowerALU/blob/master/block_diagram_modified.png "Modified Block Diagram")
 
 ##Operations
+
 |opcode| Operation      |
 | -----|:--------------:|
 | 0000 | Transfer A     |
