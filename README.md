@@ -34,3 +34,18 @@ This is an 8-bit power ALU. The ALU takes a single 8-bit value and an opcode, pe
 * The only structual block is the adder_subtractor block. I enjoy RTL a lot more than making large multiplexers and what not. I just wanted to demonstrate that I knew the difference between structal and RTL.
 
 ![Modified Block Diagram](https://github.com/rthomp10/8BitPowerALU/blob/master/block_diagram_modified.png "Modified Block Diagram")
+
+## Running with Iverilog and GTKWave
+### Linux/OSX
+1. Install [iverilog](http://iverilog.icarus.com) (It's as simple as _brew install icarus-verilog_ with [Homebrew](https://brew.sh))
+2. Install [GTKWave](http://gtkwave.sourceforge.net) to witness the system output (_brew cask install gtkwave_)
+3. _chmod 775 run_ when in the 8BitPowerALU folder
+4. ./run
+5. Open PowerALU.vcd
+### Windows
+1. Install [iverilog](http://iverilog.icarus.com) 
+2. Install [GTKWave](http://gtkwave.sourceforge.net) to witness the system output (_brew cask install gtkwave_)
+3. Go to the 8BitPowerALU folder through the command line/Power Shell
+4. _iverilog PowerALU_Ryan_Thompson.v control.v accumulator.v compare.v andornot.v adder_subtractor.v mux.v full_adder.v PowerALU_Ryan_Thompson_tb.v_
+5. _vvp a.out_
+6. Open PowerALU.vcd
