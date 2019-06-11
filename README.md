@@ -1,11 +1,11 @@
-#8BitPowerALU
+# 8BitPowerALU
 This is an 8-bit power ALU. The ALU takes a single 8-bit value and an opcode, performs the chosen operation, and the resut is to be fed back as an input and accessable as an output.
 
 ![Original Block Diagram](https://github.com/rthomp10/8BitPowerALU/blob/master/block_diagram_initial.png "Initial Block Diagram")
 
 ![Modified Block Diagram](https://github.com/rthomp10/8BitPowerALU/blob/master/block_diagram_modified.png "Modified Block Diagram")
 
-##Operations
+## Operations
 
 |opcode| Operation      |
 | -----|:--------------:|
