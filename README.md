@@ -23,7 +23,7 @@ This is an 8-bit power ALU. The ALU takes a single 8-bit value and an opcode, pe
 | 1110 | A EQ   B       |
 | 1111 | NOT A          |
 
-##Design Choices
+## Design Choices
 
 * The design choices made were certainly not "the best." They simply demostrate that I understand some of the fundumentals of hardware design
 * The ALU consistes of two synchronous blocks while the rest are asynchronous
@@ -31,5 +31,6 @@ This is an 8-bit power ALU. The ALU takes a single 8-bit value and an opcode, pe
 * The inputs are to be 8-bit 2's compliment values
 * I'm not sure why there needs to be an output control signal for this simple design, so I got rid of it
 * On the positive edge of a clock, the opcode is translated and allows the the result to flow through. The negative edge of the clock locks in the answer and provides it back to the input
+* The only structual block is the adder_subtractor block. I enjoy RTL a lot more than making large multiplexers and what not. I just wanted to demonstrate that I knew the difference between RTL and RTL.
 
 ![Modified Block Diagram](https://github.com/rthomp10/8BitPowerALU/blob/master/block_diagram_modified.png "Modified Block Diagram")
