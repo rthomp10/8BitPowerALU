@@ -39,7 +39,7 @@ This is an 8-bit power ALU. The ALU takes a single 8-bit value and an opcode, pe
 ### Linux/OSX
 1. Install [iverilog](http://iverilog.icarus.com) (It's as simple as _brew install icarus-verilog_ with [Homebrew](https://brew.sh))
 2. Install [GTKWave](http://gtkwave.sourceforge.net) to witness the system output (_brew cask install gtkwave_)
-3. _chmod 775 run_ when in the 8BitPowerALU folder
+3. When in the 8BitPowerALU folder, _chmod 775 run_
 4. _./run_
 5. Open PowerALU.vcd
 ### Windows
