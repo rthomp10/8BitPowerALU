@@ -25,11 +25,11 @@ This is an 8-bit power ALU. The ALU takes a single 8-bit value and an opcode, pe
 
 ##Design Choices
 
-..* The design choices made were certainly not "the best." They simply demostrate that I understand some of the fundumentals of hardware design
-..* The ALU consistes of two synchronous blocks while the rest are asynchronous
-..* This is a mealy state machine with a given input starting at 0
-..* The inputs are to be 8-bit 2's compliment values
-..* I'm not sure why there needs to be an output control signal for this simple design, so I got rid of it
-..* On the positive edge of a clock, the opcode is translated and allows the the result to flow through. The negative edge of the clock locks in the answer and provides it back to the input
+* The design choices made were certainly not "the best." They simply demostrate that I understand some of the fundumentals of hardware design
+* The ALU consistes of two synchronous blocks while the rest are asynchronous
+* This is a mealy state machine with a given input starting at 0
+* The inputs are to be 8-bit 2's compliment values
+* I'm not sure why there needs to be an output control signal for this simple design, so I got rid of it
+* On the positive edge of a clock, the opcode is translated and allows the the result to flow through. The negative edge of the clock locks in the answer and provides it back to the input
 
 ![Modified Block Diagram](https://github.com/rthomp10/8BitPowerALU/blob/master/block_diagram_modified.png "Modified Block Diagram")
