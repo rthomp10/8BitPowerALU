@@ -33,8 +33,6 @@ This is an 8-bit power ALU. The ALU takes a single 8-bit value and an opcode, pe
 * On the positive edge of a clock, the opcode is translated and allows the the result to flow through. The negative edge of the clock locks in the answer and provides it back to the input
 * The only structual block is the adder_subtractor block. I enjoy RTL a lot more than making large multiplexers and what not. I just wanted to demonstrate that I knew the difference between structal and RTL.
 
-![Modified Block Diagram](https://github.com/rthomp10/8BitPowerALU/blob/master/block_diagram_modified.png "Modified Block Diagram")
-
 ## Running with Iverilog and GTKWave
 ### Linux/OSX
 1. Install [iverilog](http://iverilog.icarus.com) (It's as simple as _brew install icarus-verilog_ with [Homebrew](https://brew.sh))
